@@ -1,0 +1,11 @@
+# arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# obsidian
+.obsidian/
+
+# temporarios
+*.tmp
+*.new
+*.bak
