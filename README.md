@@ -1,17 +1,68 @@
 # angular-nest-ai-kit
 
-Skills e agentes de IA para monorepos **Angular standalone + PrimeNG** (frontend) e
-**NestJS + Prisma** (backend), organizados em Nx.
+![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+
+Kit de **18 skills** e **10 agentes** de IA para monorepos **Angular standalone + PrimeNG**
+(frontend) e **NestJS + Prisma** (backend), organizados em **Nx**.
 
 Sao instrucoes de processo e templates de codigo, nao uma biblioteca executavel: nada aqui
-e instalado como dependencia. Copiar as pastas para o diretorio que a sua ferramenta de IA
-usa e comecar a chamar por nome. Ver [install.md](install.md).
+e instalado como dependencia. Voce copia as pastas para o diretorio que a sua ferramenta de
+IA usa (Claude Code, Cursor, Codex e afins) e passa a chamar pelo nome. Ver [install.md](install.md).
+
+## Inicio rapido
+
+```bash
+git clone https://github.com/eusouwilson/angular-nest-ai-kit.git
+
+# no repositorio do seu projeto (exemplo Claude Code)
+mkdir -p .claude/skills .claude/agents
+cp -r ../angular-nest-ai-kit/skills/* .claude/skills/
+cp -r ../angular-nest-ai-kit/agents/*.md .claude/agents/
+rm .claude/agents/AGENTS.md   # e indice, nao uma persona
+```
+
+Depois, trocar os placeholders (`<frontend-app>`, `@org/shared`, etc.) pelos nomes do seu
+workspace. Passo a passo em [install.md](install.md).
+
+## Exemplo de uso: uma entidade ponta a ponta
+
+Com o kit instalado, cada skill e acionada por um pedido em linguagem natural. Para uma
+entidade `Product`, a sequencia do backend ate a tela fica assim:
+
+| Pedido para a IA | Skill acionada | O que e gerado |
+| --- | --- | --- |
+| "Crie o modulo backend `products`" | `generating-backend-module` | DTOs, Service (TDD), Controller com Swagger, Module |
+| "Gere a camada de dados de `Product`" | `generating-data-layer` | `product.model.ts`, `product.service.ts`, `product.facade.ts` |
+| "Gere a listagem de `Product`" | `generating-dumb-list` | componente burro com `p-table` |
+| "Gere os dialogs de criar e editar `Product`" | `generating-dumb-create` / `generating-dumb-edit` | dialogs com Reactive Forms |
+| "Gere a pagina de `Product`" | `generating-smart-page` | smart component que orquestra facade + dumbs |
+
+Resultado esperado no workspace:
+
+```
+apps/<backend-app>/src/products/
+  dto/  products.service.ts  products.service.spec.ts
+  products.controller.ts  products.module.ts
+
+apps/<frontend-app>/src/app/products/
+  data-access/  product.model.ts  product.service.ts  product.facade.ts
+  ui/           product-list/  product-create/  product-edit/
+  feature/      product-page/
+```
+
+Para conduzir tudo com um unico ponto de entrada, chame o agente `architect`: ele decide
+quem executa cada etapa seguindo o fluxo `schema-keeper -> backend-implementer ->
+backend-quality-guard -> data-access-specialist -> ui-component-engineer ->
+frontend-qa-engineer -> security-specialist`.
+
+As skills de padrao e revisao (`angular-primeng-audit`, `rbac-security-auditor`,
+`prisma-migration-discipline`, entre outras) entram depois, para auditar o que foi gerado.
 
 ## Conteudo
 
 ```
 angular-nest-ai-kit/
-├── skills/     # 17 skills: geracao de codigo e padroes de revisao
+├── skills/     # 18 skills: geracao de codigo e padroes de revisao
 ├── agents/     # 10 personas especializadas
 └── install.md  # como instalar em Claude Code, Cursor, Codex e afins
 ```
@@ -105,4 +156,4 @@ universais.
 
 ## Licenca
 
-Definir antes de publicar.
+[MIT](LICENSE).

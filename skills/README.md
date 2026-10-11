@@ -10,29 +10,29 @@ de outro repositorio. Personas correspondentes em [agents/](../agents/AGENTS.md)
 
 | Skill | Stack | O que faz |
 | --- | --- | --- |
-| [generating-backend-module](generating-backend-module/SKILL\.md) | NestJS + Prisma | Modulo completo: DTOs, Service, Controller, Module, specs |
-| [generating-data-layer](generating-data-layer/SKILL\.md) | Angular | Model + Service HTTP + Facade com signals |
-| [generating-dumb-list](generating-dumb-list/SKILL\.md) | Angular + PrimeNG | Componente burro de listagem (p-table) |
-| [generating-dumb-create](generating-dumb-create/SKILL\.md) | Angular + PrimeNG | Dialog de criacao com Reactive Forms |
-| [generating-dumb-edit](generating-dumb-edit/SKILL\.md) | Angular + PrimeNG | Dialog de edicao com patchValue reativo |
-| [generating-smart-page](generating-smart-page/SKILL\.md) | Angular | Pagina que orquestra facade + dumbs |
+| [generating-backend-module](generating-backend-module/SKILL.md) | NestJS + Prisma | Modulo completo: DTOs, Service, Controller, Module, specs |
+| [generating-data-layer](generating-data-layer/SKILL.md) | Angular | Model + Service HTTP + Facade com signals |
+| [generating-dumb-list](generating-dumb-list/SKILL.md) | Angular + PrimeNG | Componente burro de listagem (p-table) |
+| [generating-dumb-create](generating-dumb-create/SKILL.md) | Angular + PrimeNG | Dialog de criacao com Reactive Forms |
+| [generating-dumb-edit](generating-dumb-edit/SKILL.md) | Angular + PrimeNG | Dialog de edicao com patchValue reativo |
+| [generating-smart-page](generating-smart-page/SKILL.md) | Angular | Pagina que orquestra facade + dumbs |
 
 ## Skills de padrao e revisao
 
 | Skill | Escopo | O que cobre |
 | --- | --- | --- |
-| [angular-feature-architecture](angular-feature-architecture/SKILL\.md) | frontend | Estrutura feature-sliced, nomenclatura, rotas, breadcrumb, anti-patterns |
-| [angular-primeng-ui](angular-primeng-ui/SKILL\.md) | frontend | Regras de UI, smart/dumb, dialogs, topbar, infra de UI |
-| [angular-primeng-audit](angular-primeng-audit/SKILL\.md) | frontend | Auditoria de conformidade de componentes existentes |
-| [angular-testing-patterns](angular-testing-patterns/SKILL\.md) | frontend | TDD, mock de facade com signals, o que cobrir e o que nao |
-| [frontend-auth-bootstrap](frontend-auth-bootstrap/SKILL\.md) | frontend | SSO entre apps, inicializacao sem race condition, permissoes no boot |
-| [nestjs-api-standards](nestjs-api-standards/SKILL\.md) | backend | Envelope de resposta, checklist Swagger, erro, paginacao |
-| [prisma-migration-discipline](prisma-migration-discipline/SKILL\.md) | backend | Migrations, comandos proibidos, shadow DB, performance |
-| [rbac-security-auditor](rbac-security-auditor/SKILL\.md) | backend | Auditoria RBAC com protocolo de confirmacao |
-| [shared-contracts-library](shared-contracts-library/SKILL\.md) | monorepo | O que entra na lib de contratos e o que nunca entra |
-| [monorepo-workspace-standards](monorepo-workspace-standards/SKILL\.md) | monorepo | Libs, aliases, cache, affected, Docker, CI |
-| [commit-and-branch-conventions](commit-and-branch-conventions/SKILL\.md) | processo | Conventional Commits, nome de branch, fluxo ate producao |
-| [ai-operating-protocol](ai-operating-protocol/SKILL\.md) | processo | Precedencia de regras, guardrails, enforcement automatico |
+| [angular-feature-architecture](angular-feature-architecture/SKILL.md) | frontend | Estrutura feature-sliced, nomenclatura, rotas, breadcrumb, anti-patterns |
+| [angular-primeng-ui](angular-primeng-ui/SKILL.md) | frontend | Regras de UI, smart/dumb, dialogs, topbar, infra de UI |
+| [angular-primeng-audit](angular-primeng-audit/SKILL.md) | frontend | Auditoria de conformidade de componentes existentes |
+| [angular-testing-patterns](angular-testing-patterns/SKILL.md) | frontend | TDD, mock de facade com signals, o que cobrir e o que nao |
+| [frontend-auth-bootstrap](frontend-auth-bootstrap/SKILL.md) | frontend | SSO entre apps, inicializacao sem race condition, permissoes no boot |
+| [nestjs-api-standards](nestjs-api-standards/SKILL.md) | backend | Envelope de resposta, checklist Swagger, erro, paginacao |
+| [prisma-migration-discipline](prisma-migration-discipline/SKILL.md) | backend | Migrations, comandos proibidos, shadow DB, performance |
+| [rbac-security-auditor](rbac-security-auditor/SKILL.md) | backend | Auditoria RBAC com protocolo de confirmacao |
+| [shared-contracts-library](shared-contracts-library/SKILL.md) | monorepo | O que entra na lib de contratos e o que nunca entra |
+| [monorepo-workspace-standards](monorepo-workspace-standards/SKILL.md) | monorepo | Libs, aliases, cache, affected, Docker, CI |
+| [commit-and-branch-conventions](commit-and-branch-conventions/SKILL.md) | processo | Conventional Commits, nome de branch, fluxo ate producao |
+| [ai-operating-protocol](ai-operating-protocol/SKILL.md) | processo | Precedencia de regras, guardrails, enforcement automatico |
 
 ## Convencoes de placeholder
 
